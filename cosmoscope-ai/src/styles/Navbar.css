@@ -1,0 +1,45 @@
+.navbar-container {
+    position: fixed;
+    bottom: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.7);  
+    padding: 15px 30px;
+    border-radius: 15px;
+    z-index: 1000;
+  }
+  
+  .nav-item {
+    color: #ffffff;
+    margin: 0 15px;
+  }
+  
+  .nav-item:hover {
+    color: #00d8ff;  
+  }
+  
+
+  /* Navbar styling */
+.navbar-container {
+    position: fixed;
+    bottom: 170px;  /* Added more space between navbar and footer */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 15px 30px;
+    border-radius: 15px;
+    z-index: 1000;
+  }
+  
+  .nav-item {
+    color: #ffffff;
+    margin: 0 15px;
+  }
+  
+  .nav-item:hover {
+    color: #00d8ff;  /* Highlight on hover */
+  }

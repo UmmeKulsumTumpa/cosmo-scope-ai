@@ -1,0 +1,71 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Positioning at bottom right */
+    z-index: 1000;
+  }
+  
+  .chatbot-icon-wrapper {
+    width: 100px; /* Increased size */
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    animation: shake 4s ease-in-out infinite, jump 6s ease-in-out infinite;
+  }
+  
+  /* Dynamic shaking and jumping effects */
+  @keyframes shake {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
+  
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px); /* Makes the astronaut "jump" up */
+    }
+  }
+  
+  .dynamic-astronaut {
+    width: 100%;
+    height: 100%;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .chat-window {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+  }
+  

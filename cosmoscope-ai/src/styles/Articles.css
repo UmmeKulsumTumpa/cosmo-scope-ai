@@ -1,0 +1,42 @@
+/* ArticlesSection.css */
+
+.articles-section {
+    padding: 40px 20px;
+    background-color: rgba(52, 152, 219, 0.1);
+  }
+  
+  .articles-section__heading {
+    font-size: 1.8em;
+    color: #ecf0f1;
+  }
+  
+  .articles-section__panel {
+    border: 2px solid rgba(236, 240, 241, 0.6); 
+    background-color: rgba(236, 240, 241, 0.1); 
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px rgba(52, 73, 94, 0.7); 
+  }
+  
+  .articles-section__title {
+    font-size: 1.2em;
+  }
+  
+  .articles-section__summary {
+    font-family: 'Comic Neue', cursive;
+    color: #ecf0f1;
+  }
+  
+  .articles-section__button {
+    background-color: rgba(44, 62, 80, 0.8); 
+    color: #ecf0f1;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .articles-section__button:hover {
+    background-color: #f39c12; 
+  }
+  

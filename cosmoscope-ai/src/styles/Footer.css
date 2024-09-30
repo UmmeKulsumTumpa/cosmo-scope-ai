@@ -1,0 +1,20 @@
+.footer-container {
+    position: relative;  /* Removed fixed positioning */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);  /* Semi-transparent background */
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+  .footer-text {
+    font-size: 1.2rem;
+    color: #00ff00;  /* Bright green for "Get in touch" */
+  }
+  
+  .footer-credits {
+    font-size: 0.9rem;
+    color: #cccccc;
+  }
+  
