@@ -1,14 +1,19 @@
+// Navbar.js
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt, faStar, faSatellite, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faFileAlt, faStar, faSatellite, faGlobe, faHome } from '@fortawesome/free-solid-svg-icons'; // Import Home icon
+import { Link } from 'react-router-dom'; // Import Link
 import '../styles/Navbar.css';
 
 const Navbar = () => {
     return (
         <div className="navbar-container">
-            <div className="nav-item">
+            <Link to="/" className="nav-item"> {/* Link to Home */}
+                <FontAwesomeIcon icon={faHome} size="2x" title="Home" />
+            </Link>
+            <Link to="/articles" className="nav-item"> {/* Link to Articles */}
                 <FontAwesomeIcon icon={faFileAlt} size="2x" title="Articles" />
-            </div>
+            </Link>
             <div className="nav-item">
                 <FontAwesomeIcon icon={faStar} size="2x" title="Scoring Board" />
             </div>

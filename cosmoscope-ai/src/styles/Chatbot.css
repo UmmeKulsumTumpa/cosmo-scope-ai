@@ -1,62 +1,61 @@
 .chatbot-container {
     position: fixed;
     bottom: 20px;
-    right: 20px; /* Positioning at bottom right */
+    right: 20px;
     z-index: 1000;
-  }
-  
-  .chatbot-icon-wrapper {
-    width: 100px; /* Increased size */
+}
+
+.chatbot-icon-wrapper {
+    width: 100px;
     height: 100px;
     position: relative;
     cursor: pointer;
     animation: shake 4s ease-in-out infinite, jump 6s ease-in-out infinite;
-  }
-  
-  /* Dynamic shaking and jumping effects */
-  @keyframes shake {
+}
+
+@keyframes shake {
     0%, 100% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     25% {
-      transform: rotate(-5deg);
+        transform: rotate(-5deg);
     }
     50% {
-      transform: rotate(5deg);
+        transform: rotate(5deg);
     }
     75% {
-      transform: rotate(-5deg);
+        transform: rotate(-5deg);
     }
-  }
-  
-  @keyframes jump {
+}
+
+@keyframes jump {
     0%, 100% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
     50% {
-      transform: translateY(-20px); /* Makes the astronaut "jump" up */
+        transform: translateY(-20px);
     }
-  }
-  
-  .dynamic-astronaut {
+}
+
+.dynamic-astronaut {
     width: 100%;
     height: 100%;
     animation: float 3s ease-in-out infinite;
-  }
-  
-  @keyframes float {
+}
+
+@keyframes float {
     0% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
     50% {
-      transform: translateY(-10px);
+        transform: translateY(-10px);
     }
     100% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
-  }
-  
-  .chat-window {
+}
+
+.chat-window {
     width: 300px;
     height: 400px;
     background-color: #fff;
@@ -67,5 +66,13 @@
     position: absolute;
     bottom: 80px;
     right: 0;
-  }
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.chat-window p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}

@@ -6,7 +6,6 @@
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 
 
   background-image: url('./assets/bg.jpg');  
@@ -24,75 +23,3 @@
   
 }
 
-/* Hero section styling */
-/* .hero-section {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);  
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.main-title {
-  font-size: 5rem;
-  font-weight: bold;
-  color: #00d8ff;
-}
-
-.subtitle {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  color: #ffffff;
-}
-
-.description {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #cccccc;
-} */
-
-/* Navbar styling */
-/* .navbar-container {
-  position: fixed;
-  bottom: 170px;  
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.5);  
-  padding: 15px 30px;
-  border-radius: 15px;
-  z-index: 1000;
-}
-
-.nav-item {
-  color: #ffffff;
-  margin: 0 15px;
-}
-
-.nav-item:hover {
-  color: #00d8ff;  
-} */
-
-/* Footer section */
-/* .footer-container {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6); 
-  padding: 20px;
-  color: #ffffff;
-}
-
-.footer-text {
-  font-size: 1.2rem;
-  color: #00ff00; 
-}
-
-.footer-credits {
-  font-size: 0.9rem;
-  color: #cccccc;
-}
-
- */
