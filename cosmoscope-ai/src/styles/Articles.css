@@ -3,6 +3,8 @@
 .articles-section {
     padding: 40px 20px;
     background-color: rgba(52, 152, 219, 0.1);
+    margin-left: 20%;
+    margin-right: 20%;
   }
   
   .articles-section__heading {

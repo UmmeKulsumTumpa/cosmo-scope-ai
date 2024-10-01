@@ -1,4 +1,4 @@
-/* Footer.css */
+/* Footer.css
 .footer-container {
   width: 100%;
   text-align: center;
@@ -15,4 +15,57 @@
 .footer-credits {
   font-size: 0.9rem;
   color: #cccccc;
+} */
+
+.footer-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.get-in-touch {
+  margin-bottom: 2rem;
+}
+
+.get-in-touch p {
+  color: #00ff00;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00ff00;
+}
+
+.colophon {
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+.colophon p {
+  margin: 0.5rem 0;
+}
+
+.colophon p:first-child {
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
