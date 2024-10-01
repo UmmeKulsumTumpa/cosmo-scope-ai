@@ -9,20 +9,22 @@ import Chatbot from './components/Chatbot';
 import './App.css';
 
 function App() {
-	return (
-		<Router>
-			<div className="app-container">
-				<Navbar />
-				<Routes>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/articles" element={<Articles />} />
-					<Route path="/chatbot" element={<Chatbot />} />
-				</Routes>
-				<Chatbot />
-				<Footer />
-			</div>
-		</Router>
-	);
+  return (
+    <Router>
+      <div className="app-container">
+        <div className="content-wrapper">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/articles" element={<Articles />} />
+            <Route path="/chatbot" element={<Chatbot />} />
+          </Routes>
+          <Chatbot />
+          <Footer />
+        </div>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

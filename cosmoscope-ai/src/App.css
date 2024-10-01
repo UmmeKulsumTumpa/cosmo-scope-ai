@@ -1,25 +1,46 @@
-/* App-wide styles */
-.app-container {
-  background-image: radial-gradient(50% 50% at 50% 50%, rgb(26, 26, 26) 0%, rgb(0, 0, 0) 60%), url('./assets/bg.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-
-
-  background-image: url('./assets/bg.jpg');  
-  background-size: cover;
-  background-position: center;
-  background-color: rgba(0, 0, 0, 0.6); 
-  background-blend-mode: darken; 
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
 }
 
+.app-container {
+  background-image: url('./assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+.content-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax-back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax-base {
+  transform: translateZ(0);
+}
