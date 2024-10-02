@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .home-page-container {
   display: flex;
   flex-direction: column;
@@ -54,7 +56,7 @@
   animation: parallax 1s forwards; /* Trigger animation */
 }
 
-.visitor-counter {
+/* .visitor-counter {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -71,4 +73,38 @@
 .visitor-counter p {
   margin: 0;
   text-align: center;
+} */
+
+.visitor-counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0, 0, 50, 0.8), rgba(50, 0, 100, 0.8));
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(100, 0, 255, 0.6);
+  z-index: 1000;
+  animation: cosmic-fade 4s infinite alternate;
 }
+
+.visitor-counter p {
+  margin: 0;
+  text-align: center;
+}
+
+@keyframes cosmic-fade {
+  0% {
+    opacity: 0.8;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(100, 0, 255, 0.6);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0px 0px 20px rgba(63, 136, 136, 0.5), 0px 0px 40px rgba(157, 100, 255, 0.7);
+  }
+}
+
