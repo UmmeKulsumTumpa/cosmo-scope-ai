@@ -53,3 +53,22 @@
   border-radius: 10px;
   animation: parallax 1s forwards; /* Trigger animation */
 }
+
+.visitor-counter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  z-index: 1000;
+}
+
+.visitor-counter p {
+  margin: 0;
+  text-align: center;
+}
