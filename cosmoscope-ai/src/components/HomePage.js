@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import RandomThoughts from './RandomThoughts';
 import '../styles/HomePage.css';
 
 const HomePage = () => {
@@ -30,6 +31,7 @@ const HomePage = () => {
 				<p className="subtitle">Discover Exoplanets, Explore the Cosmos, and Unlock New Worlds</p>
 				<p className="description">Crafting digital interfaces</p>
 			</div>
+			<RandomThoughts />
 		</div>
 	);
 };

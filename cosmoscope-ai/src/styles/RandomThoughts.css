@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merienda:wght@300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Button for triggering the random thought modal */
+.random-thoughts-button {
+    background: rgba(9, 27, 62, 0.7); /* Apply a semi-transparent background */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(74, 73, 128, 0.6), 0px 0px 30px rgba(39, 29, 94, 0.8);
+    transition: box-shadow 0.4s ease, background 0.4s ease;
+  
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    z-index: 1000;
+  }
+  
+  .random-thoughts-button:hover {
+    background: rgba(23, 50, 100, 0.7); /* Slightly reduce transparency on hover */
+    box-shadow: 0px 0px 20px rgba(13, 16, 19, 0.8), 0px 0px 40px rgba(12, 9, 30, 1);
+  }
+  
+  
+  /* Modal overlay for the background effect */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 50, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  /* Modal content with cosmic effects */
+  .modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Merienda', cursive; 
+  font-weight: 900;
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.8), 0px 0px 80px rgba(100, 0, 255, 1);
+    max-width: 400px;
+    animation: cosmicAppear 0.6s ease-out;
+  }
+  
+  /* Close button for the modal */
+  .close-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff1744;
+  }
+  
+  /* Cosmic animation for modal content */
+  @keyframes cosmicAppear {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Fade-in animation for the modal overlay */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Text inside the modal */
+  .modal-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-family: 'Merienda', cursive; /* Apply Merienda font to the paragraph */
+  font-weight: 900;
+    text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.8), 0px 0px 10px rgba(157, 100, 255, 1);
+  }
+
+  /* Modal content with cosmic effects */
+.modal-content {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 0px 50px rgba(0, 255, 255, 0.8), 0px 0px 80px rgba(100, 0, 255, 1);
+    max-width: 400px;
+    position: relative; /* Allows the close button to position itself relative to the modal content */
+    animation: cosmicAppear 0.6s ease-out;
+  }
+  
+  /* Close button for the modal */
+  .close-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px; /* Positioning inside the modal */
+    right: 10px; /* Positioned in the top-right corner inside */
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff1744;
+  }

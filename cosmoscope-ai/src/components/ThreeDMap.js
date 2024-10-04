@@ -1,5 +1,5 @@
 // src/components/ThreeDMap.js
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import Papa from 'papaparse';
@@ -7,6 +7,8 @@ import '../App.css';  // Make sure the styles are imported
 
 function ThreeDMap() {
   const mountRef = useRef(null);
+  const [selectedPlanet, setSelectedPlanet] = useState(null); // State for clicked planet info
+  const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 }); // State for mouse click position
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -23,6 +25,10 @@ function ThreeDMap() {
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(0, 1, 1).normalize();
     scene.add(directionalLight);
+
+    // Raycaster for detecting clicks on planets
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
 
     class StellarEntity {
       constructor(distance, radius, color, speed, angle, name, isStar = false) {
@@ -107,6 +113,25 @@ function ThreeDMap() {
     controls.autoRotate = true;
     controls.autoRotateSpeed = 0.5;
 
+    // Handle planet click event
+    const handlePlanetClick = (event) => {
+      // Update the mouse position for raycasting
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+      raycaster.setFromCamera(mouse, camera);
+      const intersects = raycaster.intersectObjects(scene.children);
+
+      if (intersects.length > 0) {
+        const planet = intersects[0].object;
+        const planetData = planet.userData;
+        setSelectedPlanet({ name: planetData.name, distance: planetData.distance.toFixed(2) });
+        setClickPosition({ x: event.clientX, y: event.clientY }); // Update the position to where the mouse clicked
+      }
+    };
+
+    window.addEventListener('click', handlePlanetClick);
+
     const animate = () => {
       requestAnimationFrame(animate);
       scene.children.forEach(child => {
@@ -129,6 +154,7 @@ function ThreeDMap() {
     });
 
     return () => {
+      window.removeEventListener('click', handlePlanetClick);
       if (mountRef.current && renderer.domElement) {
         mountRef.current.removeChild(renderer.domElement); // Ensure that the element exists before trying to remove it
       }
@@ -136,8 +162,25 @@ function ThreeDMap() {
   }, []);
 
   return (
-    <div>
+    <div style={{ position: 'relative' }}>
       <div ref={mountRef} style={{ width: '100%', height: '100vh' }} />
+      {selectedPlanet && (
+        <div
+          style={{
+            position: 'absolute',
+            top: clickPosition.y, // Position based on click
+            left: clickPosition.x, // Position based on click
+            transform: 'translate(-50%, -100%)', // Adjust to center above the click
+            padding: '10px',
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            border: '1px solid black',
+            borderRadius: '5px'
+          }}
+        >
+          <strong>Planet Name:</strong> {selectedPlanet.name} <br />
+          <strong>Distance:</strong> {selectedPlanet.distance} AU
+        </div>
+      )}
     </div>
   );
 }
