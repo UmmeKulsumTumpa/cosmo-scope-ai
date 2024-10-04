@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Articles from './components/Articles';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
+import ArticleDetails from "./components/ArticleDetails";
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/articles" element={<Articles />} />
             <Route path="/chatbot" element={<Chatbot />} />
+			<Route path="/article/:id" element={<ArticleDetails />} />
           </Routes>
           <Chatbot />
           <Footer />

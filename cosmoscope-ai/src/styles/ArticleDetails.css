@@ -1,0 +1,63 @@
+/* Importing preferred fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Heading Container */
+.details-section__heading-container {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100%); /* Move offscreen to the left */
+    transition: all 0.8s ease; /* Smooth animation */
+}
+
+.details-section__heading {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.5em;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animation for the heading */
+.animate-heading {
+    opacity: 1;
+    transform: translateX(0); /* Move into position */
+}
+
+/* PDF Panel */
+.details-section__panel {
+    background-color: rgba(236, 240, 241, 0.1);
+    padding: 40px;
+    margin: 20px auto;
+    border: 2px solid rgba(236, 240, 241, 0.6);
+    box-shadow: 5px 5px rgba(52, 73, 94, 0.7);
+    max-width: 800px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Move down */
+    transition: all 0.8s ease; /* Smooth animation */
+}
+
+/* Animation for content sliding in */
+.animate-content {
+    opacity: 1;
+    transform: translateY(0); /* Move into position */
+}
+
+/* Back Button */
+.details-section__back-button {
+    background-color: rgba(44, 62, 80, 0.8);
+    color: #ecf0f1;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    font-style: italic;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.details-section__back-button:hover {
+    background-color: #f39c12;
+}
