@@ -55,6 +55,18 @@
     }
 }
 
+/* Keyframes for wipe from right animation */
+@keyframes wipeFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .chat-window {
     width: 320px;
     height: 600px;
@@ -71,6 +83,7 @@
     justify-content: flex-start;
     color: #ecf0f1;
     cursor: grab;
+    animation: wipeFromRight 0.8s ease forwards;
 }
 
 .chat-top-bar {

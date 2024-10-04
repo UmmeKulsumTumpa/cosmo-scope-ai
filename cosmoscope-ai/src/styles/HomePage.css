@@ -75,6 +75,18 @@
   text-align: center;
 } */
 
+/* Add a keyframe for wipe from left effect */
+@keyframes wipeFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .visitor-counter {
   position: absolute;
   top: 20px;
@@ -89,7 +101,7 @@
   text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
   box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.5), 0px 0px 30px rgba(100, 0, 255, 0.6);
   z-index: 1000;
-  animation: cosmic-fade 4s infinite alternate;
+  animation: cosmic-fade 4s infinite alternate, wipeFromLeft 1s ease-out;
 }
 
 .visitor-counter p {

@@ -2,6 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+@keyframes wipeFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
 /* Button for triggering the random thought modal */
 .random-thoughts-button {
     background: rgba(9, 27, 62, 0.7); /* Apply a semi-transparent background */
@@ -20,6 +31,7 @@
     bottom: 30px;
     left: 20px;
     z-index: 1000;
+    animation: wipeFromLeft 1s ease-out;
   }
   
   .random-thoughts-button:hover {
