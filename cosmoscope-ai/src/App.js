@@ -7,6 +7,7 @@ import Articles from './components/Articles';
 import Footer from './components/Footer';
 import Chatbot from './components/Chatbot';
 import ArticleDetails from "./components/ArticleDetails";
+import ThreeDMap from './components/ThreeDMap';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/articles" element={<Articles />} />
             <Route path="/chatbot" element={<Chatbot />} />
 			<Route path="/article/:id" element={<ArticleDetails />} />
+			<Route path="/threed-map" element={<ThreeDMap />} />
           </Routes>
           <Chatbot />
           <Footer />

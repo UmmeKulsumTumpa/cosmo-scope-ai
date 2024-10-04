@@ -17,9 +17,9 @@ const Navbar = () => {
             <div className="nav-item">
                 <FontAwesomeIcon icon={faStar} size="2x" title="Scoring Board" />
             </div>
-            <div className="nav-item">
+            <Link to="/threed-map" className="nav-item"> {/* Link to 3D Map */}
                 <FontAwesomeIcon icon={faGlobe} size="2x" title="3D Map" />
-            </div>
+            </Link>
             <div className="nav-item">
                 <FontAwesomeIcon icon={faSatellite} size="2x" title="News Section" />
             </div>

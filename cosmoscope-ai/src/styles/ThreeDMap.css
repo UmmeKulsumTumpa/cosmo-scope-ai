@@ -1,0 +1,16 @@
+/* src/App.css */
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.planet-info {
+    position: absolute;
+    background-color: rgba(245, 245, 245, 0.8);
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none;
+    display: none;
+    white-space: nowrap;
+}
