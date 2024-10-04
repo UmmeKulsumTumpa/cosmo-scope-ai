@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Articles.css";
 
 const Articles = () => {
@@ -38,9 +37,13 @@ const Articles = () => {
                 <div className="articles-section__panel" key={article.id}>
                     <h3 className="articles-section__title">{article.title}</h3>
                     <p className="articles-section__summary">{article.summary}</p>
-                    <Link to={`/article/${article.id}`}>
+                    <a 
+                        href={article.pdf} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
                         <button className="articles-section__button">Read More</button>
-                    </Link>
+                    </a>
                 </div>
             ))}
         </section>
