@@ -1,4 +1,3 @@
-// Articles.js
 import React from "react";
 import "../styles/Articles.css";
 

@@ -1,3 +1,8 @@
+/* Importing preferred fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/* Articles Section */
 .articles-section {
   padding: 40px 20px;
   background-color: rgba(52, 152, 219, 0.1);
@@ -9,36 +14,50 @@
 }
 
 .articles-section__heading {
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.8em;
   color: #ecf0f1;
   grid-column: span 2; /* Heading spans across both columns */
 }
 
 .articles-section__panel {
+  position: relative;
   border: 2px solid rgba(236, 240, 241, 0.6); 
   background-color: rgba(236, 240, 241, 0.1); 
   padding: 20px;
+  padding-bottom: 50px;
   box-shadow: 5px 5px rgba(52, 73, 94, 0.7); 
 }
 
 .articles-section__title {
-  font-size: 1.2em;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5em;
+  color: #37d2fd;
 }
 
 .articles-section__summary {
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Merriweather Sans', sans-serif;
   color: #ecf0f1;
+  font-size: 1em;
 }
 
 .articles-section__button {
-  background-color: rgba(44, 62, 80, 0.8); 
+  background-color: rgba(44, 62, 80, 0.8);
+  position: absolute;
+  bottom: 10px;
+  left: 10px; 
+  margin-top: 10px;
   color: #ecf0f1;
   padding: 10px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  font-family: 'Merriweather', serif; 
+  font-weight: 700; 
+  font-style: italic;
+  transition: background-color 0.3s ease;
 }
 
 .articles-section__button:hover {
-  background-color: #f39c12; 
+  background-color: #0c5d76; 
 }
