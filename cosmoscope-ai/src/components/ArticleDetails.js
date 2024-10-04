@@ -47,7 +47,7 @@ const ArticleDetails = () => {
         return (
             <section className="details-section">
                 <h2 className="details-section__heading">Article Not Found</h2>
-                <Link to="/">
+                <Link to="/articles">
                     <button className="details-section__back-button">Back to Articles</button>
                 </Link>
             </section>
@@ -74,7 +74,7 @@ const ArticleDetails = () => {
                 </Document>
             </div>
 
-            <Link to="/">
+            <Link to="/articles">
                 <button className="details-section__back-button">Back to Articles</button>
             </Link>
         </section>
